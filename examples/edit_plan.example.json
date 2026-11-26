@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "style": "velocity",
-  "comp": { "name": "BeatForge Edit", "width": 1920, "height": 1080, "fps": 60, "duration": 6.857 },
+  "comp": { "name": "Kadenz Edit", "width": 1920, "height": 1080, "fps": 60, "duration": 6.857 },
   "song": { "path": "song/track.mp3", "bpm": 140, "start": 0.0 },
   "cuts": [
     {

@@ -1,6 +1,6 @@
-# Contributing to BeatForge
+# Contributing to Kadenz
 
-Thanks for your interest! BeatForge is early, so this is the best time to shape it. 🎬
+Thanks for your interest! Kadenz is early, so this is the best time to shape it. 🎬
 
 ## Ways to help
 - 🐛 **Report bugs:** open an issue with your clips' format, AE version and the error
@@ -11,7 +11,7 @@ Thanks for your interest! BeatForge is early, so this is the best time to shape 
 
 ## Project layout
 ```
-beatforge/
+kadenz/
   audio/       # [1] song → music_map.json
   vision/      # [2] clips → shots.json
   brain/       # [3] director → edit_plan.json
@@ -22,8 +22,8 @@ examples/      # example edit plans and styles
 
 ## Dev setup
 ```bash
-git clone https://github.com/<you>/beatforge.git
-cd beatforge
+git clone https://github.com/<you>/kadenz.git
+cd kadenz
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
 ```

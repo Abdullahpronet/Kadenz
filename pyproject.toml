@@ -1,5 +1,5 @@
 [project]
-name = "beatforge"
+name = "kadenz"
 version = "0.0.1"
 description = "Drop in clips + a song, get a beat-synced After Effects project. 100% local AI."
 readme = "README.md"
@@ -16,7 +16,7 @@ ai = ["ollama"]
 dev = ["pytest", "ruff"]
 
 [project.scripts]
-beatforge = "beatforge.cli:main"
+kadenz = "kadenz.cli:main"
 
 [build-system]
 requires = ["setuptools>=68"]

@@ -1,4 +1,4 @@
-<h1 align="center">🎬 BeatForge</h1>
+<h1 align="center">🎬 Kadenz</h1>
 
 <p align="center">
   <b>Drop in clips + a song → get a beat-synced After Effects project.</b><br>
@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/demo.gif" alt="BeatForge demo" width="720"><br>
+  <img src="assets/demo.gif" alt="Kadenz demo" width="720"><br>
   <sub><i>(demo GIF coming with v0.1)</i></sub>
 </p>
 
@@ -19,11 +19,11 @@
 
 ---
 
-## 🤔 Why BeatForge?
+## 🤔 Why Kadenz?
 
 Making a montage, a gaming edit or an esports highlight reel takes **hours** of scrubbing clips and lining up cuts with the beat.
 
-BeatForge does the boring part for you:
+Kadenz does the boring part for you:
 
 1. **Listens** to your song: beats, drops, build-ups, quiet parts
 2. **Watches** your clips: finds the best shots, action moments and calm moments
@@ -68,11 +68,11 @@ The AI **never edits pixels**. It writes an **edit plan** (a simple JSON file), 
 ## 🚀 Quick start *(planned for v0.1)*
 
 ```bash
-git clone https://github.com/<you>/beatforge.git
-cd beatforge
+git clone https://github.com/<you>/kadenz.git
+cd kadenz
 pip install -e .
 
-beatforge --clips ./my_clips --song ./track.mp3 --style velocity --out edit.jsx
+kadenz --clips ./my_clips --song ./track.mp3 --style velocity --out edit.jsx
 ```
 
 Then in After Effects: **File → Scripts → Run Script File… → `edit.jsx`** ✅
@@ -93,7 +93,7 @@ Then in After Effects: **File → Scripts → Run Script File… → `edit.jsx`*
 
 ## 🤝 Contributing
 
-BeatForge is in early development. This is the best time to shape it!
+Kadenz is in early development. This is the best time to shape it!
 See [`CONTRIBUTING.md`](CONTRIBUTING.md). Ideas, issues and PRs are welcome.
 
 ## ⭐ Support
@@ -102,4 +102,4 @@ If you like the idea, **star the repo**. It helps more editors find it.
 
 ## 📄 License
 
-[MIT](LICENSE) © BeatForge contributors
+[MIT](LICENSE) © Kadenz contributors

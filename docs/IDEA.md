@@ -1,4 +1,4 @@
-# BeatForge: Idea & Architecture
+# Kadenz: Idea & Architecture
 
 ## 🎯 The vision
 
@@ -10,7 +10,7 @@
 - **Video editors:** a fast first rough cut they can polish
 
 ### What makes it different
-| Other tools | BeatForge |
+| Other tools | Kadenz |
 |---|---|
 | Cloud upload, subscription | **100% local**, free and open source |
 | Output is a flat rendered video | Output is an **editable AE / Resolve project** |
@@ -21,7 +21,7 @@
 
 ## 🏗️ Architecture
 
-BeatForge is a pipeline of **4 independent stages**. Each stage reads and writes plain data, so each one can be built, tested and improved on its own.
+Kadenz is a pipeline of **4 independent stages**. Each stage reads and writes plain data, so each one can be built, tested and improved on its own.
 
 ```
 song.mp3 ──► [1] Audio Analyzer ──┐
@@ -31,7 +31,7 @@ clips/   ──► [2] Clip Analyzer  ──┘                                 
                                                                             └─ ffmpeg (quick render)
 ```
 
-### [1] Audio Analyzer: `beatforge/audio/`
+### [1] Audio Analyzer: `kadenz/audio/`
 **Input:** song file. **Output:** `music_map.json`
 
 - Tempo (BPM) and **beat** timestamps
@@ -41,7 +41,7 @@ clips/   ──► [2] Clip Analyzer  ──┘                                 
 
 Tools: `librosa` (MVP), optionally `madmom` or `beat_this` for better accuracy.
 
-### [2] Clip Analyzer: `beatforge/vision/`
+### [2] Clip Analyzer: `kadenz/vision/`
 **Input:** folder of clips. **Output:** `shots.json`
 
 - **Shot detection:** split each clip into shots (`PySceneDetect`)
@@ -51,7 +51,7 @@ Tools: `librosa` (MVP), optionally `madmom` or `beat_this` for better accuracy.
 
 Tools: `PySceneDetect`, `OpenCV`, CLIP / a small local VLM.
 
-### [3] Director: `beatforge/brain/`
+### [3] Director: `kadenz/brain/`
 **Input:** `music_map.json` + `shots.json` + style preset. **Output:** `edit_plan.json`
 
 Decides **which shot goes where**:
@@ -63,7 +63,7 @@ Decides **which shot goes where**:
 **v0.1:** rule-based (fast, predictable, no AI needed).
 **v0.2:** a local LLM (via Ollama / llama.cpp) gets a compact summary of the song and shots and returns the plan. The rule engine validates the plan and repairs it if needed.
 
-### [4] Exporters: `beatforge/exporters/`
+### [4] Exporters: `kadenz/exporters/`
 **Input:** `edit_plan.json`. **Output:** a project for your editor.
 
 - **After Effects:** generates an ExtendScript `.jsx` that imports footage, creates the comp, places and trims layers on the beats, and adds effect keyframes. Can run headless through `aerender`.
@@ -72,7 +72,7 @@ Decides **which shot goes where**:
 
 ---
 
-## 📄 The edit plan: the heart of BeatForge
+## 📄 The edit plan: the heart of Kadenz
 
 Everything flows through one simple, human-readable file. See [`examples/edit_plan.example.json`](../examples/edit_plan.example.json).
 
@@ -139,5 +139,5 @@ Styles are small config files that steer the director:
 
 1. Ship **v0.1** with a killer **demo GIF**: clips in, AE timeline building itself on the beat
 2. README polished, one-command install
-3. Same-day launch: Show HN, r/AfterEffects, r/editors, r/LocalLLaMA, r/VideoEditing, X / TikTok (post an edit *made by BeatForge*)
+3. Same-day launch: Show HN, r/AfterEffects, r/editors, r/LocalLLaMA, r/VideoEditing, X / TikTok (post an edit *made by Kadenz*)
 4. Ship visibly afterward: weekly releases, community style presets, a showcase of user edits
