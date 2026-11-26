@@ -1,0 +1,38 @@
+{
+  "version": "0.1",
+  "style": "velocity",
+  "comp": { "name": "BeatForge Edit", "width": 1920, "height": 1080, "fps": 60, "duration": 6.857 },
+  "song": { "path": "song/track.mp3", "bpm": 140, "start": 0.0 },
+  "cuts": [
+    {
+      "start": 0.000, "end": 1.714,
+      "clip": "clips/intro_walk.mp4", "in": 3.20, "speed": 1.0,
+      "tags": ["calm"],
+      "effects": [{ "type": "fade_in", "at": 0.0, "duration": 0.4 }]
+    },
+    {
+      "start": 1.714, "end": 3.429,
+      "clip": "clips/clutch_1v3.mp4", "in": 12.40, "speed": 1.0,
+      "tags": ["action", "highlight"],
+      "effects": [{ "type": "zoom_punch", "at": 0.0, "strength": 0.15 }]
+    },
+    {
+      "start": 3.429, "end": 4.286,
+      "clip": "clips/clutch_1v3.mp4", "in": 18.05, "speed": 0.5,
+      "tags": ["action"],
+      "effects": [{ "type": "speed_ramp", "from": 1.0, "to": 0.3, "at": 0.2 }]
+    },
+    {
+      "start": 4.286, "end": 5.143,
+      "clip": "clips/ace_round.mp4", "in": 44.10, "speed": 1.0,
+      "tags": ["action", "highlight"],
+      "effects": [{ "type": "flash", "at": 0.0 }, { "type": "shake", "at": 0.0, "strength": 0.6 }]
+    },
+    {
+      "start": 5.143, "end": 6.857,
+      "clip": "clips/team_celebration.mp4", "in": 2.00, "speed": 1.0,
+      "tags": ["crowd", "hype"],
+      "effects": [{ "type": "zoom_punch", "at": 0.0, "strength": 0.1 }]
+    }
+  ]
+}
