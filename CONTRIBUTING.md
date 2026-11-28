@@ -22,8 +22,8 @@ examples/      # example edit plans and styles
 
 ## Dev setup
 ```bash
-git clone https://github.com/<you>/kadenz.git
-cd kadenz
+git clone https://github.com/Abdullahpronet/Kadenz.git
+cd Kadenz
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
 ```

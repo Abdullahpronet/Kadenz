@@ -68,8 +68,8 @@ The AI **never edits pixels**. It writes an **edit plan** (a simple JSON file), 
 ## 🚀 Quick start *(planned for v0.1)*
 
 ```bash
-git clone https://github.com/<you>/kadenz.git
-cd kadenz
+git clone https://github.com/Abdullahpronet/Kadenz.git
+cd Kadenz
 pip install -e .
 
 kadenz --clips ./my_clips --song ./track.mp3 --style velocity --out edit.jsx
